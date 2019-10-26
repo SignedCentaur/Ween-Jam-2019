@@ -5,16 +5,18 @@ using UnityEngine;
 public class TurnOnLight : MonoBehaviour
 {
     public GameObject Light;
-    bool InteractTrigger;
+    public bool InteractTrigger;
+    public bool LightReset;
 
-    private void Start()
+    private void Awake()
     {
-        gameObject.transform.GetChild(0).gameObject.SetActive(false);
+        Light.SetActive(false);
+        LightReset = true;
     }
 
     private void OnTriggerStay(Collider other)
     {
-        if(other.gameObject.tag == "Player")
+        if((other.gameObject.tag == "Player") && (LightReset == true))
         {
             InteractTrigger = true;
         }
@@ -32,7 +34,19 @@ public class TurnOnLight : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && (InteractTrigger == true))
         {
-            gameObject.transform.GetChild(0).gameObject.SetActive(true);
+                Light.SetActive(true);
+                StartCoroutine(LightDuration()); 
         }
+    }
+
+    IEnumerator LightDuration()
+    {
+        Debug.Log ("Hello");
+        yield return new WaitForSeconds(60);
+        Light.SetActive(false);
+        LightReset = false;
+        InteractTrigger = false;
+        yield return new WaitForSeconds(120);
+        LightReset = true;
     }
 }
