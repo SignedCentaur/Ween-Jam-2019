@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 11400000}
   - component: {fileID: 5400000}
   - component: {fileID: 8200000}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FPSController
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -301,7 +301,7 @@ GameObject:
   - component: {fileID: 2000000}
   - component: {fileID: 8100000}
   - component: {fileID: 12474086}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FirstPersonCharacter
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -391,7 +391,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 478445333}
-  m_Layer: 0
+  - component: {fileID: 478445334}
+  m_Layer: 8
   m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -413,6 +414,28 @@ Transform:
   m_Father: {fileID: 400002}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &478445334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 478445332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8135dd45771075d44a04820b630dbef6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullets: {fileID: 4616843951001715190, guid: 7aa3fe2feed1fa544ada44746bc463a5, type: 3}
+  player: {fileID: 100000}
+  gunEnd: {fileID: 3025244922492675777}
+  childAnimator: {fileID: 6490794378036099758}
+  gunDamage: 1
+  fireRate: 0.4
+  bulletCount: 12
+  bulletSpread: 10
+  isShooting: 0
+  isReloading: 0
 --- !u!1 &231872729862822835
 GameObject:
   m_ObjectHideFlags: 0
@@ -424,7 +447,7 @@ GameObject:
   - component: {fileID: 2703548557792937913}
   - component: {fileID: 1812769741851260845}
   - component: {fileID: 718691820168686557}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder.008
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -470,7 +493,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 8f305902069d13a4698c8288bf16130f, type: 3}
+  - {fileID: 2100000, guid: 149169be6b6f83d4d9a2616a813c0e70, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -502,7 +525,7 @@ GameObject:
   - component: {fileID: 5719999258005462393}
   - component: {fileID: 5606200977781812823}
   - component: {fileID: 3768909832970209251}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BezierCurve
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -580,7 +603,7 @@ GameObject:
   - component: {fileID: 4665716940619395280}
   - component: {fileID: 6507229350818932894}
   - component: {fileID: 6296002010839031072}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -626,7 +649,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 8f305902069d13a4698c8288bf16130f, type: 3}
+  - {fileID: 2100000, guid: 19ca363de7b280642a0642af0bdc8967, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -658,7 +681,7 @@ GameObject:
   - component: {fileID: 8185685607457743387}
   - component: {fileID: 3781067492102538867}
   - component: {fileID: 7258632749004024550}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ammo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -704,7 +727,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 8f305902069d13a4698c8288bf16130f, type: 3}
+  - {fileID: 2100000, guid: 149169be6b6f83d4d9a2616a813c0e70, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -736,7 +759,7 @@ GameObject:
   - component: {fileID: 4453628845764737578}
   - component: {fileID: 9003038926261765507}
   - component: {fileID: 1347092520452640872}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder.005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -782,7 +805,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 8f305902069d13a4698c8288bf16130f, type: 3}
+  - {fileID: 2100000, guid: 149169be6b6f83d4d9a2616a813c0e70, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -814,7 +837,7 @@ GameObject:
   - component: {fileID: 7093763662563206362}
   - component: {fileID: 1812524353043545131}
   - component: {fileID: 285212190280066646}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BezierCurve.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -860,7 +883,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 8f305902069d13a4698c8288bf16130f, type: 3}
+  - {fileID: 2100000, guid: 9c47643d81d1fa347b6e1ea22603b9e2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -890,7 +913,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3025244922492675777}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ProjectileSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -922,7 +945,7 @@ GameObject:
   - component: {fileID: 8048957611240963632}
   - component: {fileID: 1147198663102245586}
   - component: {fileID: 4758564496515301650}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube.006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -968,7 +991,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 8f305902069d13a4698c8288bf16130f, type: 3}
+  - {fileID: 2100000, guid: 149169be6b6f83d4d9a2616a813c0e70, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1000,7 +1023,7 @@ GameObject:
   - component: {fileID: 854494558419803570}
   - component: {fileID: 22646099956831991}
   - component: {fileID: 7576990617401952319}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BezierCurve.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1046,7 +1069,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 8f305902069d13a4698c8288bf16130f, type: 3}
+  - {fileID: 2100000, guid: 9c47643d81d1fa347b6e1ea22603b9e2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1078,7 +1101,7 @@ GameObject:
   - component: {fileID: 2471481193214155304}
   - component: {fileID: 5815168585928177340}
   - component: {fileID: 200880294746547873}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1124,7 +1147,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 8f305902069d13a4698c8288bf16130f, type: 3}
+  - {fileID: 2100000, guid: 149169be6b6f83d4d9a2616a813c0e70, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1156,7 +1179,7 @@ GameObject:
   - component: {fileID: 4974262020611397386}
   - component: {fileID: 7901903982380587170}
   - component: {fileID: 4507448067140308084}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1202,7 +1225,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 8f305902069d13a4698c8288bf16130f, type: 3}
+  - {fileID: 2100000, guid: 149169be6b6f83d4d9a2616a813c0e70, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1234,7 +1257,7 @@ GameObject:
   - component: {fileID: 6617952571164785746}
   - component: {fileID: 3057900101258206908}
   - component: {fileID: 1371723092763394473}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1280,7 +1303,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 8f305902069d13a4698c8288bf16130f, type: 3}
+  - {fileID: 2100000, guid: 149169be6b6f83d4d9a2616a813c0e70, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1312,7 +1335,7 @@ GameObject:
   - component: {fileID: 1876207502063843897}
   - component: {fileID: 1194028769578637034}
   - component: {fileID: 4373807741198901552}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1358,7 +1381,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 8f305902069d13a4698c8288bf16130f, type: 3}
+  - {fileID: 2100000, guid: 9c47643d81d1fa347b6e1ea22603b9e2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1390,7 +1413,7 @@ GameObject:
   - component: {fileID: 3516128507634319929}
   - component: {fileID: 1596115024293943047}
   - component: {fileID: 850747132024632430}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TopRail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1436,7 +1459,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 8f305902069d13a4698c8288bf16130f, type: 3}
+  - {fileID: 2100000, guid: 19ca363de7b280642a0642af0bdc8967, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1468,7 +1491,7 @@ GameObject:
   - component: {fileID: 5914407338294142136}
   - component: {fileID: 2938468673434003459}
   - component: {fileID: 2225750400127835300}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Hinge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1535,7 +1558,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 8f305902069d13a4698c8288bf16130f, type: 3}
+  - {fileID: 2100000, guid: 149169be6b6f83d4d9a2616a813c0e70, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1567,7 +1590,7 @@ GameObject:
   - component: {fileID: 8003742979922805567}
   - component: {fileID: 5757619534347654378}
   - component: {fileID: 394750728088248167}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BezierCurve.005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1613,7 +1636,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 8f305902069d13a4698c8288bf16130f, type: 3}
+  - {fileID: 2100000, guid: 9c47643d81d1fa347b6e1ea22603b9e2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1645,7 +1668,7 @@ GameObject:
   - component: {fileID: 6374713021973120269}
   - component: {fileID: 8851088114481101740}
   - component: {fileID: 5591308769776637854}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BezierCurve.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1691,7 +1714,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 8f305902069d13a4698c8288bf16130f, type: 3}
+  - {fileID: 2100000, guid: 9c47643d81d1fa347b6e1ea22603b9e2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1723,7 +1746,7 @@ GameObject:
   - component: {fileID: 2783057530427559674}
   - component: {fileID: 3512625902285793582}
   - component: {fileID: 1196974533410973967}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BezierCurve.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1769,7 +1792,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 8f305902069d13a4698c8288bf16130f, type: 3}
+  - {fileID: 2100000, guid: 9c47643d81d1fa347b6e1ea22603b9e2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1801,7 +1824,7 @@ GameObject:
   - component: {fileID: 295804170563162744}
   - component: {fileID: 2736577674831008962}
   - component: {fileID: 9169639807818726327}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder.006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1847,7 +1870,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 8f305902069d13a4698c8288bf16130f, type: 3}
+  - {fileID: 2100000, guid: 149169be6b6f83d4d9a2616a813c0e70, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1879,7 +1902,7 @@ GameObject:
   - component: {fileID: 8083371814019070720}
   - component: {fileID: 5679801891917068241}
   - component: {fileID: 3731474144731422369}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BezierCurve.006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1925,7 +1948,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 8f305902069d13a4698c8288bf16130f, type: 3}
+  - {fileID: 2100000, guid: 9c47643d81d1fa347b6e1ea22603b9e2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1957,7 +1980,7 @@ GameObject:
   - component: {fileID: 7194343592775120083}
   - component: {fileID: 5055029294114556505}
   - component: {fileID: 4617642051331757112}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: HingeGuarg1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2006,7 +2029,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 8f305902069d13a4698c8288bf16130f, type: 3}
+  - {fileID: 2100000, guid: 149169be6b6f83d4d9a2616a813c0e70, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2038,7 +2061,7 @@ GameObject:
   - component: {fileID: 1340760972611525093}
   - component: {fileID: 195522415784671742}
   - component: {fileID: 3430182743750164414}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: StockLarge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2084,7 +2107,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 8f305902069d13a4698c8288bf16130f, type: 3}
+  - {fileID: 2100000, guid: 19ca363de7b280642a0642af0bdc8967, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2116,7 +2139,7 @@ GameObject:
   - component: {fileID: 835932600953542800}
   - component: {fileID: 7359601421477350683}
   - component: {fileID: 8613864893738590168}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2162,7 +2185,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 8f305902069d13a4698c8288bf16130f, type: 3}
+  - {fileID: 2100000, guid: 19ca363de7b280642a0642af0bdc8967, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2194,7 +2217,7 @@ GameObject:
   - component: {fileID: 242805488627633533}
   - component: {fileID: 6499691236189611485}
   - component: {fileID: 2395983672447179607}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2240,7 +2263,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 8f305902069d13a4698c8288bf16130f, type: 3}
+  - {fileID: 2100000, guid: 19ca363de7b280642a0642af0bdc8967, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2271,7 +2294,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7802687291031767230}
   - component: {fileID: 6490794378036099758}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shotgun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2285,7 +2308,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6490794378036099757}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2327,7 +2350,7 @@ GameObject:
   - component: {fileID: 6841419821108888620}
   - component: {fileID: 4035415237177400530}
   - component: {fileID: 8776365271431510783}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder.009
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2373,7 +2396,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 8f305902069d13a4698c8288bf16130f, type: 3}
+  - {fileID: 2100000, guid: 149169be6b6f83d4d9a2616a813c0e70, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2405,7 +2428,7 @@ GameObject:
   - component: {fileID: 7297081488505385311}
   - component: {fileID: 6407587601544836957}
   - component: {fileID: 4282069557201629774}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube.005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2451,7 +2474,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 8f305902069d13a4698c8288bf16130f, type: 3}
+  - {fileID: 2100000, guid: 19ca363de7b280642a0642af0bdc8967, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2483,7 +2506,7 @@ GameObject:
   - component: {fileID: 5819236831068734420}
   - component: {fileID: 3320682486254114099}
   - component: {fileID: 6169631966485953466}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder.007
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2529,7 +2552,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 8f305902069d13a4698c8288bf16130f, type: 3}
+  - {fileID: 2100000, guid: 149169be6b6f83d4d9a2616a813c0e70, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2561,7 +2584,7 @@ GameObject:
   - component: {fileID: 6027416923895508970}
   - component: {fileID: 479512157493058142}
   - component: {fileID: 2881299928580640682}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2607,7 +2630,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6478536213147159724, guid: 8f305902069d13a4698c8288bf16130f, type: 3}
+  - {fileID: 2100000, guid: 19ca363de7b280642a0642af0bdc8967, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2639,7 +2662,7 @@ GameObject:
   - component: {fileID: 2097985965227780624}
   - component: {fileID: 7523115034444554990}
   - component: {fileID: 3232249409228985279}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: HingeGuard2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2687,7 +2710,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 8f305902069d13a4698c8288bf16130f, type: 3}
+  - {fileID: 2100000, guid: 149169be6b6f83d4d9a2616a813c0e70, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2719,7 +2742,7 @@ GameObject:
   - component: {fileID: 8337563404318645757}
   - component: {fileID: 6681102997579799249}
   - component: {fileID: 1249650719149616825}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2765,7 +2788,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 8f305902069d13a4698c8288bf16130f, type: 3}
+  - {fileID: 2100000, guid: 149169be6b6f83d4d9a2616a813c0e70, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2797,7 +2820,7 @@ GameObject:
   - component: {fileID: 1093322678860950617}
   - component: {fileID: 6208161216263036504}
   - component: {fileID: 514781457278458791}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: StockSmall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2843,7 +2866,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 8f305902069d13a4698c8288bf16130f, type: 3}
+  - {fileID: 2100000, guid: 19ca363de7b280642a0642af0bdc8967, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
