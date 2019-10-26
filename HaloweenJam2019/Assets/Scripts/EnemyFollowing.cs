@@ -25,4 +25,13 @@ public class EnemyFollowing : MonoBehaviour
             agent.destination = destination;
         }
     }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Light"))
+        {
+            Destroy(gameObject);
+        }
+    }
+
 }
