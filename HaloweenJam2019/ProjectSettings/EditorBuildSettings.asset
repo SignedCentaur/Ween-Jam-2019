@@ -4,14 +4,5 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
-    guid: c4c78c07c86cabd43a2d01538f18c090
-  - enabled: 1
-    path: Assets/Scenes/ZamboTown.unity
-    guid: 7c33e78a90789e0448439687bad2ff56
-  - enabled: 1
-    path: Assets/Scenes/Credits.unity
-    guid: b0cf8c397e5a8e44480681b8180eca17
+  m_Scenes: []
   m_configObjects: {}
