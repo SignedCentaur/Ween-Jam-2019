@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+[RequireComponent(typeof(AudioSource))]
 public class TurnOnLight : MonoBehaviour
 {
     public GameObject Light;
@@ -10,6 +11,7 @@ public class TurnOnLight : MonoBehaviour
     public bool LightReset;
     public GameObject player;
     public Text InteractText;
+    AudioSource buttonPush;
 
     private void Awake()
     {
@@ -17,6 +19,7 @@ public class TurnOnLight : MonoBehaviour
         LightReset = true;
         player = GameObject.FindGameObjectWithTag("Player");
         InteractText.enabled = false;
+        buttonPush = GetComponent<AudioSource>();
     }
 
     private void OnTriggerStay(Collider other)
@@ -42,7 +45,8 @@ public class TurnOnLight : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && (InteractTrigger == true))
         {
             Light.SetActive(true);
-            StartCoroutine(LightDuration()); 
+            StartCoroutine(LightDuration());
+            buttonPush.Play(0);
         }
     }
 
