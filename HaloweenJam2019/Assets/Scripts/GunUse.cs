@@ -25,6 +25,10 @@ public class GunUse : MonoBehaviour
     public bool isShooting = false;
     public bool isReloading = false;
     public bool camKick = false;
+    public bool endlessAmmo;
+    [Header("Recoil Smoothing")]
+    public int smoothFrames;
+    public float maxRecoil;
 
     void Start()
     {
@@ -41,34 +45,35 @@ public class GunUse : MonoBehaviour
         {
             StartCoroutine("Reload");
         }
-        if(camKick)
-        {
-            StartCoroutine("CamKick");
-        }
     }
+    /*
     IEnumerator CamKick()
     {
-        cam.Rotate(new Vector3(-10f, 0, 0));
-        yield return new WaitForSeconds(.1f);
-        cam.Rotate(new Vector3(-10f, 0, 0));
-        yield return new WaitForSeconds(.1f);
-        cam.Rotate(new Vector3(5f, 0, 0));
-        yield return new WaitForSeconds(.1f);
-        cam.Rotate(new Vector3(5f, 0, 0));
-        yield return new WaitForSeconds(.1f);
-        cam.Rotate(new Vector3(5f, 0, 0));
-        yield return new WaitForSeconds(.1f);
-        cam.Rotate(new Vector3(5f, 0, 0));
-        yield return new WaitForSeconds(.1f);
-    }
+        float totalRot = 0;
+        float recoilIncrement = -(maxRecoil / smoothFrames);
+        for(int i = smoothFrames; i > 0; i--)
+        {
+            print("Looping");
+            totalRot += recoilIncrement;
+            cam.Rotate(new Vector3(totalRot, 0, 0));
+            yield return new WaitForSeconds(0.1f);
+        }
+        for (int i = smoothFrames; i > 0; i--)
+        {
+            yield return new WaitForFixedUpdate();
+            cam.Rotate(new Vector3(-recoilIncrement, 0, 0));
+        }
+
+
+
+    }*/
     IEnumerator Shoot()
     {
         if (!isShooting && !isReloading)
         {
-            if (currentAmmo > 0)
+            if (currentAmmo > 0 || endlessAmmo)
             {
                 isShooting = true;
-                camKick = true;
                 StartCoroutine("Flash");
                 for (int i = 0; i < bulletCount; i += 1)
                 {
@@ -76,12 +81,13 @@ public class GunUse : MonoBehaviour
                 }
                 childAnimator.SetTrigger("Shoot");
                 currentAmmo -= 1;
-                ammoUI.GetComponent<UnityEngine.UI.Image>().sprite = ammoNumber[currentAmmo];
-                clips[0].Play();
-
+                if(ammoUI)
+                    ammoUI.GetComponent<UnityEngine.UI.Image>().sprite = ammoNumber[currentAmmo];
+                if(clips.Length > 0)
+                    clips[0].Play();
+                StartCoroutine("CamKick");
                 yield return new WaitForSeconds(fireRate);
                 isShooting = false;
-                camKick = false;
             }
             else
             {

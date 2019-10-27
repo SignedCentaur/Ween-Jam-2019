@@ -175,6 +175,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 478445334, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: smoothFrames
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 478445334, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: maxRecoil
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 478445334, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: endlessAmmo
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
 --- !u!1 &255490938 stripped
