@@ -8,6 +8,7 @@ public class GunUse : MonoBehaviour
     public GameObject player;
     public Transform gunEnd;
     public Animator childAnimator;
+    public GameObject flash;
     [Header("Math Stuff")]
     public int gunDamage;
     public float fireRate;
@@ -34,7 +35,7 @@ public class GunUse : MonoBehaviour
         if (!isShooting && !isReloading)
         {
             isShooting = true;
-
+            StartCoroutine("Flash");
             for (int i = 0; i < bulletCount; i += 1)
             {
                 GameObject temp = Instantiate(bullets, gunEnd.transform.position, gunEnd.transform.rotation * Quaternion.Euler(90 + Random.Range(-bulletSpread / 2, bulletSpread / 2), 0, Random.Range(-bulletSpread / 2, bulletSpread / 2)));
@@ -56,5 +57,11 @@ public class GunUse : MonoBehaviour
             yield return new WaitForSeconds(2.3f);
             isReloading = false;
         }
+    }
+    IEnumerator Flash()
+    {
+        flash.SetActive(true);
+        yield return new WaitForSeconds(0.1f);
+        flash.SetActive(false);
     }
 }
