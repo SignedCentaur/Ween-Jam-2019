@@ -21,7 +21,17 @@ public class GunUse : MonoBehaviour
     [Header("Bools")]
     public bool isShooting = false;
     public bool isReloading = false;
+<<<<<<< HEAD
     
+=======
+    public bool camKick = false;
+
+    void Start()
+    {
+        clips = GetComponentsInChildren<AudioSource>();
+        cam = transform.parent.transform;//.parent.transform;
+    }
+>>>>>>> parent of 027b680... Made gun work without UI or sound
     void Update()
     {
         if (Input.GetButton("Fire1"))
@@ -32,7 +42,29 @@ public class GunUse : MonoBehaviour
         {
             StartCoroutine("Reload");
         }
+        if(camKick)
+        {
+            StartCoroutine("CamKick");
+        }
     }
+<<<<<<< HEAD
+=======
+    IEnumerator CamKick()
+    {
+        cam.Rotate(new Vector3(-10f, 0, 0));
+        yield return new WaitForSeconds(.1f);
+        cam.Rotate(new Vector3(-10f, 0, 0));
+        yield return new WaitForSeconds(.1f);
+        cam.Rotate(new Vector3(5f, 0, 0));
+        yield return new WaitForSeconds(.1f);
+        cam.Rotate(new Vector3(5f, 0, 0));
+        yield return new WaitForSeconds(.1f);
+        cam.Rotate(new Vector3(5f, 0, 0));
+        yield return new WaitForSeconds(.1f);
+        cam.Rotate(new Vector3(5f, 0, 0));
+        yield return new WaitForSeconds(.1f);
+    }
+>>>>>>> parent of 027b680... Made gun work without UI or sound
     IEnumerator Shoot()
     {
         if (!isShooting && !isReloading)
@@ -40,6 +72,7 @@ public class GunUse : MonoBehaviour
             if (currentAmmo > 0)
             {
                 isShooting = true;
+                camKick = true;
                 StartCoroutine("Flash");
                 for (int i = 0; i < bulletCount; i += 1)
                 {
@@ -48,9 +81,14 @@ public class GunUse : MonoBehaviour
                 childAnimator.SetTrigger("Shoot");
                 currentAmmo -= 1;
                 ammoUI.GetComponent<UnityEngine.UI.Image>().sprite = ammoNumber[currentAmmo];
+<<<<<<< HEAD
+=======
+                clips[0].Play();
+>>>>>>> parent of 027b680... Made gun work without UI or sound
 
                 yield return new WaitForSeconds(fireRate);
                 isShooting = false;
+                camKick = false;
             }
             else
             {
