@@ -75,9 +75,10 @@ public class EnemySpawner : MonoBehaviour
         if(!hasSpawned)
         {
             hasSpawned = true;
+            GameObject test;
             if (!isClose)
             {
-                Instantiate(zombie, transform.position + new Vector3(Random.Range(-spawnDis.x, spawnDis.x), 3f, Random.Range(-spawnDis.y, spawnDis.y)), transform.rotation);
+                test = Instantiate(zombie, transform.position + new Vector3(Random.Range(-spawnDis.x, spawnDis.x), 0f, Random.Range(-spawnDis.y, spawnDis.y)), transform.rotation);
             }
             else
             {
@@ -86,25 +87,27 @@ public class EnemySpawner : MonoBehaviour
                 {
                     if(moduloSpawnPoint.y == 0)
                     {
-                        Instantiate(zombie, transform.position + new Vector3(Random.Range(-spawnDis.x * 2, -spawnDis.x), 0f, Random.Range(-spawnDis.y * 2, -spawnDis.y)), transform.rotation);
+                        test = Instantiate(zombie, transform.position + new Vector3(Random.Range(-spawnDis.x * 2, -spawnDis.x), 0f, Random.Range(-spawnDis.y * 2, -spawnDis.y)), transform.rotation);
                     }
                     else
                     {
-                        Instantiate(zombie, transform.position + new Vector3(Random.Range(-spawnDis.x * 2, -spawnDis.x), 0f, Random.Range(spawnDis.y, spawnDis.y * 2)), transform.rotation);
+                        test = Instantiate(zombie, transform.position + new Vector3(Random.Range(-spawnDis.x * 2, -spawnDis.x), 0f, Random.Range(spawnDis.y, spawnDis.y * 2)), transform.rotation);
                     }
                 }
                 else
                 {
                     if (moduloSpawnPoint.y == 0)
                     {
-                        Instantiate(zombie, transform.position + new Vector3(Random.Range(spawnDis.x, spawnDis.x * 2), 0f, Random.Range(-spawnDis.y * 2, -spawnDis.y)), transform.rotation);
+                        test = Instantiate(zombie, transform.position + new Vector3(Random.Range(spawnDis.x, spawnDis.x * 2), 0f, Random.Range(-spawnDis.y * 2, -spawnDis.y)), transform.rotation);
                     }
                     else
                     {
-                        Instantiate(zombie, transform.position + new Vector3(Random.Range(spawnDis.x, spawnDis.x * 2), 0f, Random.Range(spawnDis.y, spawnDis.y * 2)), transform.rotation);
+                        test = Instantiate(zombie, transform.position + new Vector3(Random.Range(spawnDis.x, spawnDis.x * 2), 0f, Random.Range(spawnDis.y, spawnDis.y * 2)), transform.rotation);
                     }
                 }
             }
+            test.transform.localScale *= Random.Range(.8f, 1.2f);
+
             yield return new WaitForSeconds(spawnRate);
             hasSpawned = false;
         }
