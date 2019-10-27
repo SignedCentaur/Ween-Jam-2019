@@ -13,11 +13,11 @@ public class BulletStuff : MonoBehaviour
         Destroy(gameObject, 1f);
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (other.gameObject.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Enemy"))
         {
-            EnemyHealth health = other.GetComponent<EnemyHealth>();
+            EnemyHealth health = collision.gameObject.GetComponent<EnemyHealth>();
             if (health != null)
             {
                 health.Damage(bulletDamage);
