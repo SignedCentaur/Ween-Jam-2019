@@ -65,7 +65,7 @@ public class EnemyTrickle : MonoBehaviour
             hasSpawned[i] = true;
             yield return new WaitForSeconds(Random.Range(0, spawnRate));
 
-            Instantiate(zombie, nodes[i].position + new Vector3(Random.Range(-spawnDis.x, spawnDis.x), 3f, Random.Range(-spawnDis.y, spawnDis.y)), transform.rotation);
+            Instantiate(zombie, nodes[i].position + new Vector3(Random.Range(-spawnDis.x, spawnDis.x), 0f, Random.Range(-spawnDis.y, spawnDis.y)), transform.rotation);
 
             yield return new WaitForSeconds(spawnRate * (nodes.Length - 2));
             hasSpawned[i] = false;
