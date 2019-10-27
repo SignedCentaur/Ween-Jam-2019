@@ -15,11 +15,8 @@ public class EnemyHealth : MonoBehaviour
     public void Damage(float damageAmount)
     {
         currentHealth --;
-        if(currentHealth <= 0 && !GetComponent<EnemyFollowing>().isDead)
+        if(currentHealth <= 0)
         {
-            GetComponent<EnemyFollowing>().SpawnGore();
-            GetComponent<EnemyFollowing>().SpawnGore();
-            GetComponent<EnemyFollowing>().isDead = true;
             Destroy(gameObject);
         }
     }
