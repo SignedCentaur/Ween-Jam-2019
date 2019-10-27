@@ -86,22 +86,22 @@ public class EnemySpawner : MonoBehaviour
                 {
                     if(moduloSpawnPoint.y == 0)
                     {
-                        Instantiate(zombie, transform.position + new Vector3(Random.Range(-spawnDis.x * 2, -spawnDis.x), 3f, Random.Range(-spawnDis.y * 2, -spawnDis.y)), transform.rotation);
+                        Instantiate(zombie, transform.position + new Vector3(Random.Range(-spawnDis.x * 2, -spawnDis.x), 0f, Random.Range(-spawnDis.y * 2, -spawnDis.y)), transform.rotation);
                     }
                     else
                     {
-                        Instantiate(zombie, transform.position + new Vector3(Random.Range(-spawnDis.x * 2, -spawnDis.x), 3f, Random.Range(spawnDis.y, spawnDis.y * 2)), transform.rotation);
+                        Instantiate(zombie, transform.position + new Vector3(Random.Range(-spawnDis.x * 2, -spawnDis.x), 0f, Random.Range(spawnDis.y, spawnDis.y * 2)), transform.rotation);
                     }
                 }
                 else
                 {
                     if (moduloSpawnPoint.y == 0)
                     {
-                        Instantiate(zombie, transform.position + new Vector3(Random.Range(spawnDis.x, spawnDis.x * 2), 3f, Random.Range(-spawnDis.y * 2, -spawnDis.y)), transform.rotation);
+                        Instantiate(zombie, transform.position + new Vector3(Random.Range(spawnDis.x, spawnDis.x * 2), 0f, Random.Range(-spawnDis.y * 2, -spawnDis.y)), transform.rotation);
                     }
                     else
                     {
-                        Instantiate(zombie, transform.position + new Vector3(Random.Range(spawnDis.x, spawnDis.x * 2), 3f, Random.Range(spawnDis.y, spawnDis.y * 2)), transform.rotation);
+                        Instantiate(zombie, transform.position + new Vector3(Random.Range(spawnDis.x, spawnDis.x * 2), 0f, Random.Range(spawnDis.y, spawnDis.y * 2)), transform.rotation);
                     }
                 }
             }
