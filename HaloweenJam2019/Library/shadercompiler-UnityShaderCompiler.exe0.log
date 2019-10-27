@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 Base path: 'C:/Program Files/Unity/Editor/Data', plugins path 'C:/Program Files/Unity/Editor/Data/PlaybackEngines'
 =======
 Base path: 'E:/Unity/2019.2.0f1/Editor/Data', plugins path 'E:/Unity/2019.2.0f1/Editor/Data/PlaybackEngines'
@@ -7,4 +8,7 @@ Base path: 'E:/Unity/2019.2.0f1/Editor/Data', plugins path 'E:/Unity/2019.2.0f1/
 =======
 Base path: 'C:/Program Files/Unity/Hub/Editor/2019.2.0f1/Editor/Data', plugins path 'C:/Program Files/Unity/Hub/Editor/2019.2.0f1/Editor/Data/PlaybackEngines'
 >>>>>>> parent of c3f711f... Clouds & Mat fix
+=======
+Base path: 'C:/Program Files/Unity/Editor/Data', plugins path 'C:/Program Files/Unity/Editor/Data/PlaybackEngines'
+>>>>>>> parent of 982ee72... gun
 Cmd: initializeCompiler
