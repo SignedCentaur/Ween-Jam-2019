@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TurnOnLight : MonoBehaviour
 {
@@ -8,12 +9,14 @@ public class TurnOnLight : MonoBehaviour
     public bool InteractTrigger;
     public bool LightReset;
     public GameObject player;
+    public Text InteractText;
 
     private void Awake()
     {
         Light.SetActive(false);
         LightReset = true;
         player = GameObject.FindGameObjectWithTag("Player");
+        InteractText.enabled = false;
     }
 
     private void OnTriggerStay(Collider other)
@@ -21,6 +24,7 @@ public class TurnOnLight : MonoBehaviour
         if((other.gameObject.tag == "Player") && (LightReset == true))
         {
             InteractTrigger = true;
+            InteractText.enabled = true;
         }
     }
 
@@ -29,6 +33,7 @@ public class TurnOnLight : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             InteractTrigger = false;
+            InteractText.enabled = false;
         }
     }
 
