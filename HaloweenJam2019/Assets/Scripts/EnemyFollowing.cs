@@ -11,8 +11,12 @@ public class EnemyFollowing : MonoBehaviour
     Vector3 destination;
     NavMeshAgent agent;
     Animator anim;
+    [Header("Gore")]
+    public GameObject Gore;
+    public GameObject[] GoreSpawns;
     [Header("Status Bools")]
     private bool inRange;
+    public bool isDead;
     [Header("Damage Realted")]
     [SerializeField] private float damage;
     [SerializeField] private bool attacking;
@@ -37,7 +41,7 @@ public class EnemyFollowing : MonoBehaviour
             //StartCoroutine("SwingAtAir");
         }
     }
-    
+
     public void Attack()
     {
         RaycastHit hit;
@@ -55,6 +59,18 @@ public class EnemyFollowing : MonoBehaviour
             print("Nothing was hit");
         }
             
+    }
+
+    public void SpawnGore()
+    {
+        foreach(GameObject spawner in GoreSpawns)
+        {
+            GameObject flesh = Instantiate(Gore, transform.position, Quaternion.identity);
+            flesh.GetComponent<Rigidbody>().AddForce(new Vector3(Random.Range(-500, 500), Random.Range(-500, 500), Random.Range(-500, 500)));
+            flesh.GetComponent<Rigidbody>().AddTorque(new Vector3(Random.Range(-500, 500), Random.Range(-500, 500), Random.Range(-500, 500)));
+            float scale = Random.Range(0.5f, 1f);
+            flesh.transform.localScale = new Vector3(scale, scale ,scale);
+        }
     }
 
     void UpdateMoveAnimations()
