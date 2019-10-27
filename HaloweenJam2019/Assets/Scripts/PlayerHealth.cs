@@ -22,6 +22,6 @@ public class PlayerHealth : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
-        healthBar.fillAmount = (1 / totalHealth) * currentHealth;
+        //healthBar.fillAmount = (1 / totalHealth) * currentHealth;
     }
 }
